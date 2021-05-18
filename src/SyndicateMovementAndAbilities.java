@@ -128,13 +128,12 @@ public class SyndicateMovementAndAbilities {
 
 
 
-    public static void syndicateSpell(int[][] intArena,String[][] arena){ //done
+    public static void syndicateSpell(int[][] intArena,String[][] arena){
         Scanner scanner = new Scanner(System.in);
         int[] units = Util.findUnitCoordinates(arena,"$");
 
         System.out.println("square1Row:");
         int square1Row = scanner.nextInt();
-        //bug roll is always selected as for col it works as intended
         while ( (square1Row >= units[1] + 5) || (square1Row <= units[1] - 5 ) ){
             System.out.println("error try again");
             square1Row = scanner.nextInt();
@@ -166,13 +165,13 @@ public class SyndicateMovementAndAbilities {
             square2Col = scanner.nextInt();
         }
 
-        int temp = intArena[square1Row][square1Col];
-        intArena[square1Row][square1Col] = intArena[square2Row][square2Col];
-        intArena[square2Row][square2Col] = temp;
+        int temp = intArena[square1Col][square1Row];
+        intArena[square1Col][square1Row] = intArena[square2Col][square2Row];
+        intArena[square2Col][square2Row] = temp;
 
         String temp2 = arena[square1Row][square1Col];
-        arena[square1Row][square1Col] =arena[square2Row][square2Col];
-        arena[square2Row][square2Col] = temp2;
+        arena[square1Col][square1Row] =arena[square2Col][square2Row];
+        arena[square2Col][square2Row] = temp2;
 
     }
 
