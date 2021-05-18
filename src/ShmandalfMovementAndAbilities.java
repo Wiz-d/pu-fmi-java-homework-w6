@@ -150,14 +150,14 @@ public class ShmandalfMovementAndAbilities {
             }
             for (int i = lowCol ; i < highCol ; i++){
                 for (int j = lowCol; j < highCol -1 ; j++){
-                    if (intArena[square1Row][j] > intArena[square1Row][j+1]){
+                    if (intArena[j][square1Row] > intArena[j+1][square1Row]){
                         int temp = intArena[square1Row][j];
-                        intArena[square1Row][j] = intArena[square1Row][j+1];
-                        intArena[square1Row][j+1] = temp;
+                        intArena[j][square1Row] = intArena[j+1][ square1Row];
+                        intArena[j+1][square1Row] = temp;
 
                         String temp2 = arena[square1Row][j];
-                        arena[square1Row][j] = arena[square1Row][j+1];
-                        arena[square1Row][j+1] = temp2;
+                        arena[j][square1Row] = arena[j+1][square1Row];
+                        arena[j+1][square1Row] = temp2;
                     }
                 }
             }
@@ -176,14 +176,14 @@ public class ShmandalfMovementAndAbilities {
             }
             for (int i = lowRow ; i < highRow ; i++){
                 for (int j = lowRow; j < highRow - 1; j++){
-                    if (intArena[j][square1Col] > intArena[j+1][square1Col]){
+                    if (intArena[j][square1Row] > intArena[j+1][square1Row]){
                         int temp = intArena[j][square1Col];
-                        intArena[j][square1Col] = intArena[j+1][square1Col];
-                        intArena[j+1][square1Col] = temp;
+                        intArena[j][square1Row] = intArena[j+1][square1Row];
+                        intArena[j+1][square1Row] = temp;
 
-                        String temp2 = arena[j][square1Col];
-                        arena[j][square1Col] = arena[j+1][square1Col];
-                        arena[j+1][square1Col] = temp2;
+                        String temp2 = arena[j][square1Row];
+                        arena[j][square1Row] = arena[j+1][square1Row];
+                        arena[j+1][square1Row] = temp2;
                     }
                 }
             }

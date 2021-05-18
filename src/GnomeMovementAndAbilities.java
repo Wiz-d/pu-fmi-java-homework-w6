@@ -152,11 +152,11 @@ public class GnomeMovementAndAbilities {
                 square2Row = scanner.nextInt();
                 square2Col = scanner.nextInt();
 
-                intArena[square1Row][square1Col] = intArena[square1Row][square1Col] + intArena[square2Row][square2Col];
-                intArena[square2Row][square2Col] = uniqueVal--;
+                intArena[square1Col][square1Row] = intArena[square1Col][square1Row] + intArena[square2Col][square2Row];
+                intArena[square2Col][square2Row] = uniqueVal--;
 
-                arena[square1Row][square1Col] = String.valueOf(intArena[square1Row][square1Col]);
-                arena[square2Row][square2Col] = String.valueOf(uniqueVal--);
+                arena[square1Col][square1Row] = String.valueOf(intArena[square1Col][square1Row]);
+                arena[square2Col][square2Row] = String.valueOf(uniqueVal--);
 
                 uniqueVal--;
                 break;
@@ -171,13 +171,13 @@ public class GnomeMovementAndAbilities {
                 square3Row = scanner.nextInt();
                 square3Col = scanner.nextInt();
 
-                intArena[square1Row][square1Col] = intArena[square1Row][square1Col] + intArena[square2Row][square2Col] + intArena[square3Row][square3Col];
-                intArena[square2Row][square2Col] = uniqueVal--;
-                intArena[square3Row][square3Col] = uniqueVal--;
+                intArena[square1Col][square1Row] = intArena[square1Row][square1Col] + intArena[square2Row][square2Col] + intArena[square3Row][square3Col];
+                intArena[square2Col][square2Row] = uniqueVal--;
+                intArena[square3Col][square3Row] = uniqueVal--;
 
-                arena[square1Row][square1Col] = String.valueOf(intArena[square1Row][square1Col]);
-                arena[square2Row][square2Col] = String.valueOf(uniqueVal--);
-                arena[square3Row][square3Col] = String.valueOf(uniqueVal--);
+                arena[square1Col][square1Row] = String.valueOf(intArena[square1Col][square1Row]);
+                arena[square2Col][square2Row] = String.valueOf(uniqueVal--);
+                arena[square3Col][square3Row] = String.valueOf(uniqueVal--);
 
                 uniqueVal--;
         }
