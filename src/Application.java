@@ -33,6 +33,7 @@ public class Application {
                     ShmandalfMovementAndAbilities.shmandalfMovement(arenaString, counter, intArena);
                     if(answer == 2) ShmandalfMovementAndAbilities.shmandalfSpell(intArena,arenaString);
                 }
+                Util.printStringBoard(arenaString);
             }
         }
         counter++;

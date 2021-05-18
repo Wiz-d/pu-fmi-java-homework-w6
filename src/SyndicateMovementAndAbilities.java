@@ -169,7 +169,7 @@ public class SyndicateMovementAndAbilities {
         intArena[square1Col][square1Row] = intArena[square2Col][square2Row];
         intArena[square2Col][square2Row] = temp;
 
-        String temp2 = arena[square1Row][square1Col];
+        String temp2 = arena[square1Col][square1Row];
         arena[square1Col][square1Row] =arena[square2Col][square2Row];
         arena[square2Col][square2Row] = temp2;
 
